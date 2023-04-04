@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(142, 139, 139);
+}
+
+nav {
+    background: #ffffff;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: rgb(89, 88, 88);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a {
+    display: block;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.secbutton {
+    border-bottom: 1px rgb(208, 208, 208) solid;
+}
+
+/* Mobile */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item.secbutton {
+    order: 3;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 14;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.bars {
+    background: rgb(89, 88, 88);
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.bars::before, .bars::after {
+    background: rgb(89, 88, 88);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+
+.bars::before {
+    top: 5px;
+}
+
+.bars::after {
+    top: -5px;
+}
+
+/* Tablet menu */
+
+@media all and (min-width:468px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .item.secbutton {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    .secbutton {
+        border: 0;
+    }
+
+    .button a {
+        text-decoration: none;
+        padding: 7px 15px;
+        background: rgb(219, 219, 219);
+        border: 1px solid rgb(206, 206, 206);
+        border-radius: 50em;
+    }
+
+    .secbutton a {
+        text-decoration: none;
+        padding: 7px 15px;
+        background: transparent;
+        border: 1px solid rgb(206, 206, 206);
+        border-radius: 50em;
+    }
+
+    .button a:hover {
+        transition: all .25s;
+    }
+
+    .secbutton a:hover {
+        transition: all .25s;
+    }
+
+    .button a:hover {
+        background: rgb(199, 199, 199);
+        border-color: rgb(199, 199, 199);
+    }
+
+    .secbutton a:hover {
+        color: rgb(58, 58, 58);
+    }
+}
